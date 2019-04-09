@@ -63,7 +63,6 @@ public class ServerProperties {
             resourceDir = resourceDir + "/";
         }
         this.resourceDir = resourceDir;
-        this.serverProperties.put(CROSSCOMPILER_RESOURCE_BASE, this.resourceDir);
         LOG.info("As crosscompiler resource directory " + this.resourceDir + " will be used");
 
         // made a robust choice about the plugin temporary directory

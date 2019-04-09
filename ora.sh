@@ -117,20 +117,7 @@ function _exportApplication {
 			;;
 	esac
 	
-	echo 'copying resources for all robot plugins'
-    set *
     mkAndCheckDir "${exportpath}/OpenRobertaParent"
-    for Robot do
-        if [[ -d "$Robot" && -e "$Robot/resources" ]]
-        then
-            echo "  $Robot"
-            mkAndCheckDir "${exportpath}/OpenRobertaParent/$Robot"
-            cd "$Robot"
-            cp -r --parents resources "${exportpath}/OpenRobertaParent/$Robot"
-            cd ..
-        fi
-    done
-	cd ..
 	if [[ -d "Resources/tutorial" ]]
 	then
 		echo "tutorials are copied"
