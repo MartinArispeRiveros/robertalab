@@ -29,8 +29,8 @@ public class Update {
     private final String robotUpdateResourcesDir;
 
     @Inject
-    public Update(@Named("robot.plugin.ev3lejos.v1.updateResources.dir") String robotUpdateResourcesDir) {
-        this.robotUpdateResourcesDir = robotUpdateResourcesDir;
+    public Update(@Named("robot.crosscompiler.resourcebase") String crossCompilerResourceBase) {
+        this.robotUpdateResourcesDir = crossCompilerResourceBase + "updateResources/lejos_v1";
     }
 
     @GET

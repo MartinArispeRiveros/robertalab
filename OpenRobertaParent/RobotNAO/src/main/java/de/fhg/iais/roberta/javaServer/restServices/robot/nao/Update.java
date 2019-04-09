@@ -15,9 +15,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
@@ -26,12 +23,11 @@ import com.google.inject.name.Named;
  */
 @Path("/update/nao/v2-1-4-3")
 public class Update {
-    private static final Logger LOG = LoggerFactory.getLogger(Update.class);
     private final String robotUpdateResourcesDir;
 
     @Inject
-    public Update(@Named("robot.plugin.nao.updateResources.dir") String robotUpdateResourcesDir) {
-        this.robotUpdateResourcesDir = robotUpdateResourcesDir;
+    public Update(@Named("robot.crosscompiler.resourcebase") String crossCompilerResourceBase) {
+        this.robotUpdateResourcesDir = crossCompilerResourceBase + "/updateResources";
     }
 
     @GET
