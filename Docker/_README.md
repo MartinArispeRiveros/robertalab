@@ -9,7 +9,7 @@ branch develop to fill the /root/.m2 cache. This makes later builds much faster.
 ```bash
 REPO=/data/openroberta/git/robertalab
 cd $REPO/Docker
-docker build -f /meta/DockerfileGen_ubuntu_18_04 -t rbudde/openroberta_gen:1 .
+docker build -f meta/DockerfileGen_ubuntu_18_04 -t rbudde/openroberta_gen:1 .
 docker push rbudde/openroberta_gen:1
 ```
 
@@ -22,8 +22,8 @@ because the crosscompiler packages are erroneous [28.11.2018]. Java 8 is install
 REPO=/data/openroberta/git/robertalab
 CC_RESOURCES=/data/openroberta/ora-CCresources
 cd $CC_RESOURCES
-docker build -f meta/DockerfileBase_ubuntu_18_04 -t rbudde/openroberta_base:1 .
-docker push rbudde/openroberta_base:1
+docker build -f $REPO/Docker/meta/DockerfileBase_ubuntu_18_04 -t rbudde/openroberta_base:2 .
+docker push rbudde/openroberta_base:2
 ```
 ## generate the base for INTEGRATION TEST and DEBUG.
 

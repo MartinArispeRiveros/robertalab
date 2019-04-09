@@ -1,4 +1,4 @@
-FROM rbudde/openroberta_base:1
+FROM rbudde/openroberta_base:2
 
 ARG LAST_RUN_OF_BASE=2018-11-28
 
