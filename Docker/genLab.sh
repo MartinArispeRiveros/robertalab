@@ -33,7 +33,6 @@ git checkout $BRANCH
 git pull
 cd /opt/robertalab/OpenRobertaParent
 mvn clean install
-chmod +x RobotArdu/resources/linux/arduino-builder RobotArdu/resources/linux/tools-builder/ctags/5.8*/ctags
 
 cd /opt/robertalab
 rm -rf DockerInstallation
