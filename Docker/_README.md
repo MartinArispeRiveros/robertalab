@@ -34,9 +34,10 @@ The debian stretch distributions contains invalid crosscompilers packages. This 
 
 ```bash
 REPO=/data/openroberta/git/robertalab
-cd $REPO
-docker build -t rbudde/openroberta_it_ubuntu_18_04:1 -f testing/DockerfileIT_ubuntu_18_04 . --build-arg BRANCH=$BRANCH
-docker push rbudde/openroberta_it_ubuntu_18_04:1
+BRANCH=rbTest
+cd $REPO/Docker
+docker build -t rbudde/openroberta_it_ubuntu_18_04:2 -f testing/DockerfileIT_ubuntu_18_04 . --build-arg BRANCH=$BRANCH
+docker push rbudde/openroberta_it_ubuntu_18_04:2
 ```
 
 For debug you want to run an image, that contains mvn and git and all crosscompiler.
