@@ -25,3 +25,6 @@ RUN wget http://de.archive.ubuntu.com/ubuntu/pool/universe/n/newlib/libnewlib-de
     wget http://de.archive.ubuntu.com/ubuntu/pool/universe/n/newlib/libnewlib-arm-none-eabi_3.0.0.20180802-2_all.deb && \
     dpkg -i libnewlib-dev_3.0.0.20180802-2_all.deb libnewlib-arm-none-eabi_3.0.0.20180802-2_all.deb && \
     rm libnewlib-dev_3.0.0.20180802-2_all.deb libnewlib-arm-none-eabi_3.0.0.20180802-2_all.deb
+    
+WORKDIR /opt
+COPY ./ ./ora-CCresources/

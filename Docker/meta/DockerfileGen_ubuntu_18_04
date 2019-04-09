@@ -22,10 +22,8 @@ RUN apt-get install -y curl && \
     apt-get install -y docker-ce && \
     apt-get clean
 
-WORKDIR /opt
-COPY ./ ./ora-CCresources/
-
 # shallow clone of develop. Branch defaults to "develop". Run mvn once to install most all the artifacts needed in /root/.m2
+WORKDIR /opt
 RUN echo "cloning branch develop and executing mvn to fill the .m2 cache" && \
     git clone --depth=1 -b develop https://github.com/OpenRoberta/robertalab.git && \
     cd /opt/robertalab/OpenRobertaParent && \
