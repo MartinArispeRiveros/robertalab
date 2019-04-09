@@ -33,7 +33,8 @@ If called, it will checkout a branch and runs both the tests and the integration
 The debian stretch distributions contains invalid crosscompilers packages. This image is build by
 
 ```bash
-cd to-the-docker-directory-of-the-git-repo
+REPO=/data/openroberta/git/robertalab
+cd $REPO
 docker build -t rbudde/openroberta_it_ubuntu_18_04:1 -f testing/DockerfileIT_ubuntu_18_04 . --build-arg BRANCH=$BRANCH
 docker push rbudde/openroberta_it_ubuntu_18_04:1
 ```
