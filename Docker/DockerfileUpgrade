@@ -1,6 +1,6 @@
-FROM rbudde/openroberta_base:1
+FROM rbudde/openroberta_base:2
 
-ARG LAST_RUN_OF_BASE=2018-12-19
+ARG LAST_RUN_OF_BASE=2019-04-09
  
 RUN mkdir --parent /opt/openRoberta/lib /opt/openRoberta/OpenRobertaParent
 WORKDIR /opt/openRoberta
