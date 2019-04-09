@@ -7,9 +7,11 @@ It gets version numbers independent from the OpenRoberta versions. During image 
 branch develop to fill the /root/.m2 cache. This makes later builds much faster.
 
 ```bash
-cd to-the-docker-directory-of-the-git-repo
-docker build -f meta/DockerfileGen_ubuntu_18_04 -t rbudde/openroberta_gen:1 .
-docker push rbudde/openroberta_gen:1
+REPO=/data/openroberta/git/robertalab
+CC_RESOURCES=/data/openroberta/ora-CCresources
+cd $CC_RESOURCES
+docker build -f $REPO/Docker/meta/DockerfileGen_ubuntu_18_04 -t rbudde/openroberta_gen:2 .
+docker push rbudde/openroberta_gen:2
 ```
 
 ## generate the "base" IMAGE. It contains the crosscompiler.
