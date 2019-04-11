@@ -59,7 +59,7 @@ public class ServerProperties {
 
         // made a robust choice about the plugin resource directory
         String resourceDir = getStringProperty(CROSSCOMPILER_RESOURCE_BASE);
-        if ( resourceDir == null ) {
+        if ( resourceDir == null || resourceDir.trim().isEmpty() ) {
             resourceDir = System.getenv(CROSSCOMPILER_RESOURCE_BASE.replace('.', '_'));
             Assert.notNull(resourceDir, "could not allocate a the crosscompiler resource directory");
         }
