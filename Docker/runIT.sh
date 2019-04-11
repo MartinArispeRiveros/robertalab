@@ -26,6 +26,7 @@ cd /opt/robertalab/OpenRobertaParent
 mvn clean install -DskipTests -DskipITs
 
 # execute all tests, including the integration tests
+export robot_crosscompiler_resourcebase=/opt/ora-CCresources/
 mvn install -PrunIT
 RC=$?
 echo "maven return code is $RC"

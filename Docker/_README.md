@@ -59,7 +59,7 @@ in case of success it returns 0, in case of errors/failures it returns 16
 
 ```bash
 export BRANCH='develop'
-docker run rbudde/openroberta_it_ubuntu_18_04:1 $BRANCH 1.2.3 # 1.2.3 is the db version and unused for tests
+docker run rbudde/openroberta_it_ubuntu_18_04:2 $BRANCH 1.2.3 # 1.2.3 is the db version and unused for tests
 ```
 
 ## debug container
