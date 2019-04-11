@@ -1,6 +1,6 @@
 FROM rbudde/openroberta_base:2
 
-ARG LAST_RUN_OF_BASE=2019-04-11-15:44:00
+ARG LAST_RUN_OF_BASE=2019-04-11-15:51:00
 
 # shallow clone of the repo. Run mvn once to install most all the artifacts needed in /root/.m2 to speed up later builds
 WORKDIR /opt
