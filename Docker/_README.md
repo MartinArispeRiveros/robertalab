@@ -46,8 +46,8 @@ The entrypoint is "/bin/bash". This image is build by
 
 ```bash
 cd to-the-docker-directory-of-the-git-repo
-docker build -t rbudde/openroberta_debug_ubuntu_18_04:1 -f testing/DockerfileDebug_ubuntu_18_04 .
-docker push rbudde/openroberta_debug_ubuntu_18_04:1
+docker build -t rbudde/openroberta_debug_ubuntu_18_04:2 -f testing/DockerfileDebug_ubuntu_18_04 .
+docker push rbudde/openroberta_debug_ubuntu_18_04:2
 ```
 
 # run the integration tests and start a debug container
@@ -65,7 +65,7 @@ docker run rbudde/openroberta_it_ubuntu_18_04:2 $BRANCH 1.2.3 # 1.2.3 is the db 
 ## debug container
 
 ```bash
-docker run -p 7100:1999 -it --entrypoint /bin/bash rbudde/openroberta_debug_ubuntu_18_04:1
+docker run -p 7100:1999 -it --entrypoint /bin/bash rbudde/openroberta_debug_ubuntu_18_04:2
 ```
 
 It starts a /bin/bash and you probably will either run a server:
