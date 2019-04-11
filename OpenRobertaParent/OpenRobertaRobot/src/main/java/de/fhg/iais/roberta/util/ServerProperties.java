@@ -59,7 +59,9 @@ public class ServerProperties {
 
         // made a robust choice about the plugin resource directory
         String resourceDir = getStringProperty(CROSSCOMPILER_RESOURCE_BASE);
-        if ( !(resourceDir.endsWith("/") || resourceDir.endsWith("\\")) ) {
+        if ( resourceDir == null ) {
+            resourceDir = "./";
+        } else if ( !(resourceDir.endsWith("/") || resourceDir.endsWith("\\")) ) {
             resourceDir = resourceDir + "/";
         }
         this.resourceDir = resourceDir;
