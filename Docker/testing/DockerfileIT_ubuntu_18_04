@@ -13,6 +13,7 @@ RUN ( mvn clean install -PrunIT || echo '!!!!!!!!!! runIT crashed. Should NOT ha
     rm -rf robertalab 
 
 # prepare the entry point
+ENV
 WORKDIR /opt
 COPY ["./runIT.sh","./"]
 RUN chmod +x ./runIT.sh

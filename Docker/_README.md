@@ -1,18 +1,5 @@
 # preparation (done from time to time)
 
-## generate the "gen" image. This image can generate an OpenRoberta distribution.
-
-When the docker image "gen" is run, it GENERATES an OpenRoberta distribution. It is NO OpenRoberta distribution by itself.
-It gets version numbers independent from the OpenRoberta versions. During image creation a maven build is executed for
-branch develop to fill the /root/.m2 cache. This makes later builds much faster.
-
-```bash
-REPO=/data/openroberta/git/robertalab
-cd $REPO/Docker
-docker build -f meta/DockerfileGen_ubuntu_18_04 -t rbudde/openroberta_gen:1 .
-docker push rbudde/openroberta_gen:1
-```
-
 ## generate the "base" IMAGE. It contains the crosscompiler.
 
 The docker image "base" is used as basis for further images. It replaces crosscompiler for calliope and arduino by newer versions,
@@ -87,6 +74,19 @@ cd OpenRobertaParent; mvn clean install -PrunIT
 # create the images for server, database, upgrade and embedded and run them
 
 this functionality is deprecated. It may be re-used later. See the directory `TestSystemSetupTemplate` for a much more flexible test setup.
+
+## generate the "gen" image. This image can generate an OpenRoberta distribution.
+
+When the docker image "gen" is run, it GENERATES an OpenRoberta distribution. It is NO OpenRoberta distribution by itself.
+It gets version numbers independent from the OpenRoberta versions. During image creation a maven build is executed for
+branch develop to fill the /root/.m2 cache. This makes later builds much faster.
+
+```bash
+REPO=/data/openroberta/git/robertalab
+cd $REPO/Docker
+docker build -f meta/DockerfileGen_ubuntu_18_04 -t rbudde/openroberta_gen:1 .
+docker push rbudde/openroberta_gen:1
+```
 
 ## define the variables used (set as needed!):
 
