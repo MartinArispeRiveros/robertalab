@@ -287,7 +287,6 @@
 									<includes>
 										<include>**/*.class</include>
 									</includes>
-                                    <
 								</configuration>
 							</execution>
 							<execution>
