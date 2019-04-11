@@ -33,4 +33,4 @@ RUN cd /opt/ora-CCresources/RobotArdu/arduino-builder/linux;     chmod ugo+rx ar
     cd /opt/ora-CCresources/RobotArdu/arduino-builder/osx;       chmod ugo+rx arduino-builder     tools-builder/ctags/5.8*/ctags     && \
     cd /opt/ora-CCresources/RobotArdu/arduino-builder/windows;   chmod ugo+rx arduino-builder.exe tools-builder/ctags/5.8*/ctags.exe && \
     cd /opt/ora-CCresources/RobotMbed;                           chmod ugo+rx compile* && \
-    cd /opt/ora-CCresources/RobotNxt;                            chmod ugo+rx osx/* windows/*
+    cd /opt/ora-CCresources/RobotNXT;                            chmod ugo+rx osx/* windows/*
